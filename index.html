@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Programs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="program-container">
+        <h1>JavaScript Programs</h1>
+
+        <h2>Program 1: Character Check</h2>
+        <script>
+            var input = prompt("Enter a character:");
+            var charCode = input.charCodeAt(0);
+
+            if (charCode >= 48 && charCode <= 57) {
+                document.write("<p>" + input + " is a number.</p>");
+            } else if (charCode >= 65 && charCode <= 90) {
+                document.write("<p>" + input + " is an uppercase letter.</p>");
+            } else if (charCode >= 97 && charCode <= 122) {
+                document.write("<p>" + input + " is a lowercase letter.</p>");
+            } else {
+                document.write("<p>" + input + " is not a number or letter.</p>");
+            }
+        </script>
+
+        <h2>Program 2: Compare Two Integers</h2>
+        <script>
+            var num1 = parseInt(prompt("Enter the first integer:"));
+            var num2 = parseInt(prompt("Enter the second integer:"));
+
+            if (num1 > num2) {
+                document.write("<p>" + num1 + " is larger than " + num2 + "</p>");
+            } else if (num2 > num1) {
+                document.write("<p>" + num2 + " is larger than " + num1 + "</p>");
+            } else {
+                document.write("<p>Both integers are equal.</p>");
+            }
+        </script>
+
+        <h2>Program 3: Number Sign Check</h2>
+        <script>
+            var number = parseInt(prompt("Enter a number:"));
+
+            if (number > 0) {
+                document.write("<p>" + number + " is positive.</p>");
+            } else if (number < 0) {
+                document.write("<p>" + number + " is negative.</p>");
+            } else {
+                document.write("<p>" + number + " is zero.</p>");
+            }
+        </script>
+
+        <h2>Program 4: Vowel Check</h2>
+        <script>
+            var char = prompt("Enter a character (length 1):").toLowerCase();
+
+            if (char === 'a' || char === 'e' || char === 'i' || char === 'o' || char === 'u') {
+                document.write("<p>True, it's a vowel.</p>");
+            } else {
+                document.write("<p>False, it's not a vowel.</p>");
+            }
+        </script>
+
+        <h2>Program 5: Password Validation</h2>
+        <script>
+            var correctPassword = "mypassword";
+            alert('Password: mypassword \n Incorrect Password: any password you can type')
+            var userPassword = prompt("Enter your password:");
+
+            if (!userPassword) {
+                document.write("<p>Please enter your password.</p>");
+            } else if (userPassword === correctPassword) {
+                document.write("<p>Correct! The password you entered matches the original password.</p>");
+            } else {
+                document.write("<p>Incorrect password.</p>");
+            }
+        </script>
+
+        <h2>Program 6: Fixing the If/Else Statement</h2>
+        <script>
+            var greeting;
+            var hour = 13;
+            if (hour < 18) {
+                greeting = "Good day";
+            } else {
+                greeting = "Good evening";
+            }
+            document.write("<p>" + greeting + "</p>");
+        </script>
+
+        <h2>Program 7: Time Format</h2>
+        <script>
+            var time = parseInt(prompt("Enter time in 24-hour clock format (e.g., 1900 for 7 PM):"));
+
+            if (time >= 0 && time < 1200) {
+                document.write("<p>Good morning</p>");
+            } else if (time >= 1200 && time < 1700) {
+                document.write("<p>Good afternoon</p>");
+            } else if (time >= 1700 && time < 2100) {
+                document.write("<p>Good evening</p>");
+            } else if (time >= 2100 && time <= 2359) {
+                document.write("<p>Good night</p>");
+            } else {
+                document.write("<p>Invalid time format</p>");
+            }
+        </script>
+        </div>
+</body>
+</html>
